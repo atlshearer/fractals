@@ -1,6 +1,6 @@
 use std::io::Cursor;
 
-pub fn mandelbrot_bytes(x: f32, y: f32, scale: f32) -> Vec<u8> {
+pub fn mandelbrot_png_bytes(x: f32, y: f32, scale: f32) -> Vec<u8> {
     let image_buffer = mandelbrot(x, y, scale);
     let mut bytes: Vec<u8> = Vec::new();
 
@@ -12,8 +12,8 @@ pub fn mandelbrot_bytes(x: f32, y: f32, scale: f32) -> Vec<u8> {
 }
 
 fn mandelbrot(x: f32, y: f32, scale: f32) -> image::ImageBuffer<image::Rgb<u8>, Vec<u8>> {
-    let image_width = 500;
-    let image_height = 500;
+    let image_width = 250;
+    let image_height = 250;
 
     let scale_x = 2.0 / image_width as f32;
     let scale_y = 2.0 / image_height as f32;

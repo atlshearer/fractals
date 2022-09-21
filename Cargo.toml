@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 image = "0.24.3"
 num-complex = "0.4.2"
-hyper = { version = "0.14", features = ["full"] }
-tokio = { version = "1", features = ["full"] }
-futures = "0.3.24"
+rocket = "0.5.0-rc.2"
+
+[profile.dev.package.image]
+opt-level = 3
